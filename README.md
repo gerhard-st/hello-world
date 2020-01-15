@@ -1,6 +1,2 @@
 # hello-world
-hello-world
-test
-test
-test
-testb
+hello world in a container
