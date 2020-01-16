@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: hello-world
+  labels:
+    jobgroup: hello-world
+spec:
+  template:
+    metadata:
+      name: helloworldjob
+      labels:
+        jobgroup: hello-world
+    spec:
+      containers:
+      - name: c
+        image: image-registry.openshift-image-registry.svc:5000/default/hello-world
+      restartPolicy: Never
