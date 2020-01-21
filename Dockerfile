@@ -1,6 +1,6 @@
 FROM bash
-RUN apk add gcc make libc-dev
-COPY hello.c /
-ENTRYPOINT ls -lag /; make hello;./hello
+RUN apk add gcc make libc-dev; mkdir /app
+COPY hello.c /app
+ENTRYPOINT whoami; ls -lag /;cd app; make hello;./hello
 
 
